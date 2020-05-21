@@ -1,0 +1,28 @@
+springfox:
+  documentation:
+    swagger.v2.path=/api-docs
+
+server:
+  port: 8084
+  contextPath: /
+spring:
+  jackson:
+    date-format: yy-dd-mm
+    serialization.WRITE_DATES_AS_TIMESTAMPS: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    url: ${ACCOUNT-DATASOURCE:jdbc:postgresql://localhost:5432/accountdb}
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        temp.use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
