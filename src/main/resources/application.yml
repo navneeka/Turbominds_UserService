@@ -3,7 +3,7 @@ springfox:
     swagger.v2.path=/api-docs
 
 server:
-  port: 8084
+  port: 8080
   contextPath: /
 spring:
   jackson:
@@ -12,9 +12,9 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     initialization-mode: always
-    url: ${ACCOUNT-DATASOURCE:jdbc:postgresql://localhost:5432/accountdb}
-    username: postgres
-    password: postgres
+    url: ${ACCOUNT-DATASOURCE:jdbc:postgresql://postgresql:5432/turbomindsdb}
+    username: turbomind
+    password: turbomind
   jpa:
     properties:
       hibernate:
